@@ -159,9 +159,14 @@ Box<Integer> integerBox = new Box<>();
 ### Raw Types
 
 A **raw type** is the name of a generic class or interface without specifying type arguments. For example:
-
 ```java
 public class Box<T> {
     public void set(T t) { /* ... */ }
 }
+```
+
+## Generic Methods
+Generic methods are methods that introduce their own type parameters. This is similar to declaring a generic type, but the type parameter's scope is limited to the method where it is declared. Both static and non-static generic methods are allowed, as well as generic class constructors.
+
+The syntax for a generic method includes a list of type parameters, inside angle brackets, which appears before the method's return type. For static generic methods, the type parameter section must appear before the method's return type.
 
