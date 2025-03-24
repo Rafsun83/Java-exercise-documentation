@@ -278,3 +278,12 @@ public static <T extends Comparable<T>> int countGreaterThan(T[] anArray, T elem
 }
 
 ```
+
+### Generics, Inheritance, and Subtypes
+
+> As you already know, it is possible to assign an object of one type to an object of another type provided that the types are compatible. For example, you can assign an `Integer` to an `Object`, since `Object` is one of `Integer's` `supertypes`:
+```java
+Object someObject = new Object();
+Integer someInteger = new Integer(10);
+someObject = someInteger;   // OK as Integer supertype is Object
+```
