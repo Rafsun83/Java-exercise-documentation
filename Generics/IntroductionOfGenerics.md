@@ -236,3 +236,17 @@ public class NaturalNumber<T extends Integer> {
     // ...
 }
 ```
+
+### Multiple Bounds
+> A type variable with multiple bounds is a subtype of all the types listed in the bound. If one of the bounds is a class, it must be specified first. For example:
+```java
+Class A { /* ... */ }
+interface B { /* ... */ }
+interface C { /* ... */ }
+
+class D <T extends A & B & C> { /* ... */ }
+```
+> If bound A is not specified first, you get a compile-time error:
+```java
+class D <T extends B & A & C> { /* ... */ }  // compile-time error
+```
