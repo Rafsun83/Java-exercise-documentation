@@ -218,3 +218,21 @@ boolean same = Util.<Integer, String>compare(p1, p2);
 //or
 boolean same = Util.compare(p1, p2);
 ```
+### Bounded Type Parameters
+> In addition to limiting the types you can use to instantiate a generic type, bounded type parameters allow you to invoke methods defined in the bounds:
+- In bounded type you can extend generic type and add specific type with generics
+- Here this example we can see generic type variable `T` have been extended by Integer
+```java
+public class NaturalNumber<T extends Integer> {
+
+    private T n;
+
+    public NaturalNumber(T n)  { this.n = n; }
+
+    public boolean isEven() {
+        return n.intValue() % 2 == 0;
+    }
+
+    // ...
+}
+```
