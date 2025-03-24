@@ -168,6 +168,14 @@ Box rawBox = new Box();
 rawBox.set(8);  // warning: unchecked invocation to set(T)
 ```
 
+> You also get a warning if you use a raw type to invoke generic methods defined in the corresponding generic type:
+```java
+Box<String> stringBox = new Box<>();
+Box rawBox = stringBox;
+rawBox.set(8);  // warning: unchecked invocation to set(T)
+```
+> The warning shows that raw types bypass generic type checks, deferring the catch of unsafe code to runtime.
+
 ### Generic Methods
 
 Generic methods are methods that introduce their own type parameters. This is similar to declaring a generic type, but the type parameter's scope is limited to the method where it is declared. Both static and non-static generic methods are allowed, as well as generic class constructors.
