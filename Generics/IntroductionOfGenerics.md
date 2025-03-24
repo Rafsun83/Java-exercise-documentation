@@ -209,3 +209,12 @@ public class Pair<K, V> {
     public V getValue() { return value; }
 }
 ```
+
+>The complete syntax for invoking this method would be:
+ ```java
+Pair<Integer, String> p1 = new Pair<>(1, "apple");
+Pair<Integer, String> p2 = new Pair<>(2, "pear");
+boolean same = Util.<Integer, String>compare(p1, p2);
+//or
+boolean same = Util.compare(p1, p2);
+```
