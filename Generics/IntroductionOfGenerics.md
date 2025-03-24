@@ -148,7 +148,7 @@ To instantiate it, use:
 Box<Integer> integerBox = new Box<Integer>();
 ```
 
-## The Diamond (<>)
+### The Diamond (<>)
 
 In Java SE 7 and later, you can use the diamond (`<>`) to replace type arguments when invoking a generic constructor, as long as the compiler can infer the type. This simplifies code by eliminating the need to repeat the type.
 
@@ -163,6 +163,9 @@ A **raw type** is the name of a generic class or interface without specifying ty
 public class Box<T> {
     public void set(T t) { /* ... */ }
 }
+//This is the raw type of Box<T>:
+Box rawBox = new Box();
+rawBox.set(8);  // warning: unchecked invocation to set(T)
 ```
 
 ### Generic Methods
